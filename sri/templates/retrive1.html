@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table border="1">
+    <tr>
+        <th>Country</th>
+        <th>State</th>
+        <th>City</th>
+        <th>DOB</th>
+        <th>Edit</th>
+        <th>Delete</th>
+    </tr>
+    {% for x in keys %}
+    <tr>
+        <td>{{x.country1}}</td>
+        <td>{{x.state1}}</td>
+        <td>{{x.city1}}</td>
+        <td>{{x.dob1}}</td>
+        <td><a href="{% url 'edit' x.id %}">Edit</a> </td>
+        <td><a href="{% url 'delete' x.id %}">Delete</a> </td>
+    </tr>
+    {% endfor %}
+</table>
+<a href="{% url 'home' %}">Home</a>
+</body>
+</html>
